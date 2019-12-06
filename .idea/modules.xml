@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/junit-tests-hw.iml" filepath="$PROJECT_DIR$/junit-tests-hw.iml" />
       <module fileurl="file://$PROJECT_DIR$/junittestshw.iml" filepath="$PROJECT_DIR$/junittestshw.iml" />
     </modules>
   </component>
