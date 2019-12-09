@@ -44,7 +44,8 @@ class String2Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"cod, 0",
+    @CsvSource({
+            "cod, 0",
             "code, 1",
             "_, 0",
             "ccodeeecodeee, 2",
