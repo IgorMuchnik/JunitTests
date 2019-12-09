@@ -1,13 +1,13 @@
 public class String2 {
 
     public String doubleChar(String str) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
-            result += str.substring(i, i + 1) + str.substring(i, i + 1);
+            result.append(str.substring(i, i + 1)).append(str.substring(i, i + 1));
         }
 
-        return result;
+        return result.toString();
     }
 
     public int countHi(String str) {

@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.awt.image.PackedColorModel;
 
@@ -7,15 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Array2Test {
 
-    @Test
-    void mustReturnNumberOfEvensInArray() {
-        int[][] given = {{4}, {1}, {0, 1, 2, 3}, {2, 2, 2}, {101}, {10, 5, 10}, {10, 6, 10}};
-        int[] expected = {1, 0, 2, 3, 0, 2, 3};
-        int[] actual = new int[given.length];
-        for (int i = 0; i < actual.length; i++) {
-            actual[i] = new Array2().countEvens(given[i]);
-            Assertions.assertEquals(expected[i], actual[i]);
-        }
+    @ParameterizedTest
+    @CsvSource({"(4), 1", "{1}, 0", "{0, 1, 2, 3}, 2", "{2, 2, 2}, 3", "{101}, 0", "{10, 5, 10}, 2", "{10, 6, 10}, 3"})
+    void mustReturnNumberOfEvensInArray(int[] given, int expected) {
+        int actual = new Array2().countEvens(given);
+        assertEquals(expected, actual);
     }
 
     @Test
