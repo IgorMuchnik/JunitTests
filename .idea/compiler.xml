@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="junit-tests-hw" target="1.8" />
+      <module name="junit-tests-hw" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
