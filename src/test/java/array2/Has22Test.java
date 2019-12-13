@@ -12,11 +12,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Has22Test {
 
+    Has22 has22 = new Has22();
+
     @ParameterizedTest
     @DisplayName("Testing method has22 from class Array2")
     @MethodSource("generateData5")
     void mustReturnTrueIfTwoFollowingTwoInArray(int[] given, boolean expected) {
-        boolean actual = new Has22().has22(given);
+        boolean actual = has22.has22(given);
         assertEquals(expected, actual);
     }
 
@@ -34,7 +36,7 @@ class Has22Test {
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new Has22().has22(null);
+            has22.has22(null);
         });
     }
 }

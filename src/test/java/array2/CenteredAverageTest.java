@@ -10,11 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CenteredAverageTest {
 
+    CenteredAverage centeredAverage = new CenteredAverage();
+
     @ParameterizedTest
     @DisplayName("Testing method centeredAverage from class Array2")
     @MethodSource("generateData3")
     void mustReturnAverageOfArrayExcludingMaxAndMin(int[] given, int expected) {
-        int actual = new CenteredAverage().centeredAverage(given);
+        int actual = centeredAverage.centeredAverage(given);
         assertEquals(expected, actual);
     }
 
@@ -32,7 +34,7 @@ class CenteredAverageTest {
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new CenteredAverage().centeredAverage(null);
+            centeredAverage.centeredAverage(null);
         });
     }
 }

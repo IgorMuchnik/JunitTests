@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EndOtherTest {
 
+    EndOther endOther = new EndOther();
+
     @ParameterizedTest
     @DisplayName("Testing endOther")
     @CsvSource({
@@ -17,14 +19,14 @@ class EndOtherTest {
     })
     void mustReturnTrueIfOneOfTwoStringIsEndingOfAnotherLetterCaseDoesNotMatter(
             String given1, String given2, boolean expected) {
-        boolean actual = new EndOther().endOther(given1, given2);
+        boolean actual = endOther.endOther(given1, given2);
         assertEquals(expected, actual);
     }
 
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new EndOther().endOther(null, null);
+            endOther.endOther(null, null);
         });
     }
 }

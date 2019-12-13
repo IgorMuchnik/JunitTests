@@ -10,11 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Sum13Test {
 
+    Sum13 sum13 = new Sum13();
+
     @ParameterizedTest
     @DisplayName("Testing method sum13 from class Array2")
     @MethodSource("generateData4")
     void mustReturnSumOfElementsInArrayExceptThirteen(int[] given, int expected) {
-        int actual = new Sum13().sum13(given);
+        int actual = sum13.sum13(given);
         assertEquals(expected, actual);
     }
 
@@ -32,7 +34,7 @@ class Sum13Test {
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new Sum13().sum13(null);
+            sum13.sum13(null);
         });
     }
 }

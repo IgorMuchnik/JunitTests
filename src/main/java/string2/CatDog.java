@@ -2,7 +2,9 @@ public class CatDog {
 
     public boolean catDog(String str) {
 
-        if (str == null) throw new NullPointerException("argument must be not null");
+        if (str == null) {
+            throw new NullPointerException("argument must be not null");
+        }
 
         int c = 0;
         int d = 0;

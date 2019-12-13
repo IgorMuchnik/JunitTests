@@ -5,27 +5,29 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CountHiTest {
+class CountCodeTest {
+
+    CountCode countCode = new CountCode();
 
     @ParameterizedTest
-    @DisplayName("Testing countHi")
+    @DisplayName("Testing countCode")
     @CsvSource({
-            "hi, 1",
-            "get high, 1",
-            "no, 0",
-            "hihihih, 3",
-            "hai ihay hi, 1",
+            "cod, 0",
+            "code, 1",
+            "_, 0",
+            "ccodeeecodeee, 2",
+            "coDeCodECode, 1",
             "'', 0"
     })
-    void mustReturnNumberOfSubstringHiInGivenString(String given, int expected) {
-        int actual = new CountHi().countHi(given);
+    void mustReturnNumberOfSubstrindCodeButLetterDDoesNotMatter(String given, int expected) {
+        int actual = countCode.countCode(given);
         assertEquals(expected, actual);
     }
 
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new CountHi().countHi(null);
+            countCode.countCode(null);
         });
     }
 }

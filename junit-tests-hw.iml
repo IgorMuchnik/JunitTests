@@ -8,8 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java/array2test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java/string2test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java/array2" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java/string2" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java/array2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java/string2" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />

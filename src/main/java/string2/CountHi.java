@@ -2,7 +2,9 @@ public class CountHi {
 
     public int countHi(String str) {
 
-        if (str == null) throw new NullPointerException("argument must be not null");
+        if (str == null) {
+            throw new NullPointerException("argument must be not null");
+        }
 
         int count = 0;
 

@@ -5,27 +5,29 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CountCodeTest {
+class CatDogTest {
+
+    CatDog catDog = new CatDog();
 
     @ParameterizedTest
-    @DisplayName("Testing countCode")
+    @DisplayName("Testing catDog")
     @CsvSource({
-            "cod, 0",
-            "code, 1",
-            "_, 0",
-            "ccodeeecodeee, 2",
-            "coDeCodECode, 1",
-            "'', 0"
+            "cat, false",
+            "dog, false",
+            "catdog, true",
+            "ccatddogg, true",
+            "cat dog Cat, true",
+            "'', true"
     })
-    void mustReturnNumberOfSubstrindCodeButLetterDDoesNotMatter(String given, int expected) {
-        int actual = new CountCode().countCode(given);
+    void mustReturnTrueIfNumbersOfDogAndCatAreEqual(String given, boolean expected) {
+        boolean actual = catDog.catDog(given);
         assertEquals(expected, actual);
     }
 
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new CountCode().countCode(null);
+            catDog.catDog(null);
         });
     }
 }

@@ -10,11 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CountEvensTest {
 
+    CountEvens countEvens = new CountEvens();
+
     @ParameterizedTest
     @DisplayName("Testing method countEvens from class Array2")
     @MethodSource("generateData1")
     void mustReturnNumberOfEvensInArray(int[] given, int expected) {
-        int actual = new CountEvens().countEvens(given);
+        int actual = countEvens.countEvens(given);
         assertEquals(expected, actual);
     }
 
@@ -33,7 +35,7 @@ class CountEvensTest {
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new CountEvens().countEvens(null);
+            countEvens.countEvens(null);
         });
     }
 }

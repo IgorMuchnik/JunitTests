@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DoubleCharTest {
 
+    DoubleChar doubleChar = new DoubleChar();
+
     @ParameterizedTest()
     @DisplayName("Positive test")
     @CsvSource({
@@ -16,14 +18,14 @@ class DoubleCharTest {
             "'', ''"
     })
     void mustReturnStringWithDoubledEveryChar(String given, String expected) {
-        String actual = new DoubleChar().doubleChar(given);
+        String actual = doubleChar.doubleChar(given);
         assertEquals(expected, actual);
     }
 
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new DoubleChar().doubleChar(null);
+            doubleChar.doubleChar(null);
         });
     }
 }

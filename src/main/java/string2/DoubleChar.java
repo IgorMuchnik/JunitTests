@@ -2,7 +2,9 @@ public class DoubleChar {
 
     public String doubleChar(String str) {
 
-        if (str == null) throw new NullPointerException("argument must be not null");
+        if (str == null) {
+            throw new NullPointerException("argument must be not null");
+        }
 
         StringBuilder result = new StringBuilder();
 

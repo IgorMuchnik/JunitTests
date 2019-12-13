@@ -10,11 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BigDiffTest {
 
+    BigDiff bigDiff = new BigDiff();
+
     @ParameterizedTest
     @DisplayName("Testing method bigDiff from class Array2")
     @MethodSource("generateData2")
     void mustReturnDifferenceBetweenMaxAndMinInArray(int[] given, int expected) {
-        int actual = new BigDiff().bigDiff(given);
+        int actual = bigDiff.bigDiff(given);
         assertEquals(expected, actual);
     }
 
@@ -33,7 +35,7 @@ class BigDiffTest {
     @Test
     void mustHandleWithNull() {
         assertThrows(NullPointerException.class, () -> {
-            new BigDiff().bigDiff(null);
+            bigDiff.bigDiff(null);
         });
     }
 }

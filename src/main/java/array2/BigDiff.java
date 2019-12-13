@@ -2,9 +2,13 @@ public class BigDiff {
 
     public int bigDiff(int[] nums) {
 
-        if (nums == null) throw new NullPointerException("argument must be not null");
+        if (nums == null) {
+            throw new NullPointerException("argument must be not null");
+        }
 
-        if (nums.length == 0) return 0;
+        if (nums.length == 0) {
+            return 0;
+        }
 
         int min = nums[0];
         int max = nums[nums.length - 1];
