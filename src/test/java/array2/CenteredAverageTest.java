@@ -1,3 +1,5 @@
+package array2;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -10,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CenteredAverageTest {
 
-    CenteredAverage centeredAverage = new CenteredAverage();
+    private CenteredAverage centeredAverage = new CenteredAverage();
 
     @ParameterizedTest
     @DisplayName("Testing method centeredAverage from class Array2")

@@ -1,3 +1,5 @@
+package string2;
+
 public class DoubleChar {
 
     public String doubleChar(String str) {

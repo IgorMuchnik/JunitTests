@@ -1,3 +1,5 @@
+package string2;
+
 public class EndOther {
 
     public boolean endOther(String a, String b) {

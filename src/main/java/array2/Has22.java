@@ -1,3 +1,5 @@
+package array2;
+
 public class Has22 {
 
     public boolean has22(int[] nums) {

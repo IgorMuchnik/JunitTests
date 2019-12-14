@@ -1,3 +1,5 @@
+package array2;
+
 public class CountEvens {
 
     public int countEvens(int[] nums) {

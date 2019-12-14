@@ -1,3 +1,5 @@
+package array2;
+
 public class Sum13 {
 
     public int sum13(int[] nums) {

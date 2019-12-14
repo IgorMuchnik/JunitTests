@@ -1,3 +1,5 @@
+package string2;
+
 public class CountHi {
 
     public int countHi(String str) {

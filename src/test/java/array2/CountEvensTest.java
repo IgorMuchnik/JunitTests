@@ -1,3 +1,5 @@
+package array2;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -10,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CountEvensTest {
 
-    CountEvens countEvens = new CountEvens();
+    private CountEvens countEvens = new CountEvens();
 
     @ParameterizedTest
     @DisplayName("Testing method countEvens from class Array2")

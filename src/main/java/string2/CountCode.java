@@ -1,3 +1,5 @@
+package string2;
+
 public class CountCode {
 
     public int countCode(String str) {

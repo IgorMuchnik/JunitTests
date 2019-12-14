@@ -1,3 +1,5 @@
+package string2;
+
 public class CatDog {
 
     public boolean catDog(String str) {
